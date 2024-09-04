@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="september_04:main" external.linked.project.path="$MODULE_DIR$/../../september_04" external.root.project.path="$MODULE_DIR$/../../september_04" external.system.id="GRADLE" external.system.module.group="com.wordz" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_19">
+    <output url="file://$MODULE_DIR$/../../september_04/build/classes/java/main" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../september_04/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../september_04/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../september_04/src/main/resources" type="java-resource" />
+    </content>
+    <orderEntry type="jdk" jdkName="openjdk-19" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="37e89551-5c69-4ae5-b749-6ee2e336f2b9" />
+  </component>
+</module>
