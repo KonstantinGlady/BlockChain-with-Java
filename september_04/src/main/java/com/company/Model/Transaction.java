@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Model;
 
 import sun.security.provider.DSAPublicKey;
 
@@ -60,7 +60,9 @@ public class Transaction implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (o == this) return true;
-        if (!(o instanceof Transaction t)) return false;
+        if (!(o instanceof Transaction)) return false;
+        Transaction t = (Transaction) o;
+
         return Arrays.equals(t.signature, signature);
     }
 

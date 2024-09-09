@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Model;
 
 import sun.security.provider.DSAPublicKeyImpl;
 
