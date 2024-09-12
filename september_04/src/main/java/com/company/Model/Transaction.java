@@ -20,9 +20,9 @@ public class Transaction implements Serializable {
     private String timeStamp;
     private byte[] signature;
     private String signatureFX;
-    private byte[] ledgerId;
+    private Integer ledgerId;
 
-    public Transaction(byte[] from, byte[] to, Integer value, byte[] ledgerId, String timeStamp, byte[] signature) {
+    public Transaction(byte[] from, byte[] to, Integer value, Integer ledgerId, String timeStamp, byte[] signature) {
         Base64.Encoder encoder = Base64.getEncoder();
         this.from = from;
         this.fromFX = encoder.encodeToString(from);
@@ -35,15 +35,16 @@ public class Transaction implements Serializable {
         this.ledgerId = ledgerId;
     }
 
-    public Transaction(Wallet fromWallet, byte[] to, Integer value, Signature signing)
+    public Transaction(Wallet fromWallet, byte[] toAddress, Integer value, Integer ledgerId, Signature signing)
             throws InvalidKeyException, SignatureException {
 
         Base64.Encoder encoder = Base64.getEncoder();
         this.from = fromWallet.getPublicKey().getEncoded();
         this.fromFX = encoder.encodeToString(fromWallet.getPublicKey().getEncoded());
-        this.to = to;
-        this.toFX = encoder.encodeToString(to);
+        this.to = toAddress;
+        this.toFX = encoder.encodeToString(toAddress);
         this.value = value;
+        this.ledgerId = ledgerId;
         signing.initSign(fromWallet.getPrivateKey());
         signing.update(this.toString().getBytes());
         this.signature = signing.sign();

@@ -56,7 +56,8 @@ public class Block implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (o == this) return true;
-        if (!(o instanceof Block block)) return false;
+        if (!(o instanceof Block)) return false;
+        Block block = (Block) o;
 
         return Arrays.equals(block.getPrevHash(), getPrevHash());
     }
@@ -110,5 +111,37 @@ public class Block implements Serializable {
 
     public List<Transaction> getTransactionLedger() {
         return transactionLedger;
+    }
+
+    public void setPrevHash(byte[] prevHash) {
+        this.prevHash = prevHash;
+    }
+
+    public void setCurrHash(byte[] currHash) {
+        this.currHash = currHash;
+    }
+
+    public void setTimeStamp(String timeStamp) {
+        this.timeStamp = timeStamp;
+    }
+
+    public void setMinedBy(byte[] minedBy) {
+        this.minedBy = minedBy;
+    }
+
+    public void setLedgerId(Integer ledgerId) {
+        this.ledgerId = ledgerId;
+    }
+
+    public void setMiningPoints(Integer miningPoints) {
+        this.miningPoints = miningPoints;
+    }
+
+    public void setLuck(Double luck) {
+        this.luck = luck;
+    }
+
+    public void setTransactionLedger(List<Transaction> transactionLedger) {
+        this.transactionLedger = transactionLedger;
     }
 }
