@@ -83,7 +83,7 @@ public class Transaction implements Serializable {
                 ", timeStamp='" + timeStamp + '\'' +
                 ", signature=" + Arrays.toString(signature) +
                 ", signatureFX='" + signatureFX + '\'' +
-                ", ledgerId=" + Arrays.toString(ledgerId) +
+                ", ledgerId=" + ledgerId +
                 '}';
     }
 
@@ -119,7 +119,7 @@ public class Transaction implements Serializable {
         return signatureFX;
     }
 
-    public byte[] getLedgerId() {
+    public Integer getLedgerId() {
         return ledgerId;
     }
 }

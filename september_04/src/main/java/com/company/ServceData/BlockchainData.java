@@ -1,6 +1,7 @@
-package com.company;
+package com.company.ServceData;
 
 import com.company.Model.Transaction;
+import javafx.collections.ObservableList;
 
 public class BlockchainData {
     public static BlockchainData getInstance() {
@@ -16,6 +17,18 @@ public class BlockchainData {
     }
 
     public void addTransactionState(Transaction initBlockRewardTransaction) {
+
+    }
+
+    public String getWalletBalanceFX() {
+        return null;
+    }
+
+    public ObservableList<Transaction> getTransactionLedgerFX() {
+        return null;
+    }
+
+    public void setExit(boolean b) {
 
     }
 }

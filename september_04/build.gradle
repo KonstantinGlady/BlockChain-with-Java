@@ -1,0 +1,40 @@
+plugins {
+    id 'application'
+    id 'java'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+javafx {
+    version = "13"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+group = 'com.company'
+version = '1.0-SNAPSHOT'
+
+compileJava {
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
+    options.with {
+        compileJava.options.fork = true
+        compilerArgs.addAll(['--add-exports', 'java.base/sun.security.provider=ALL-UNNAMED'])
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    implementation 'org.xerial:sqlite-jdbc:3.46.1.0'
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation 'org.openjfx:javafx-controls:21'
+    implementation 'com.brsanthu:migbase64:2.2'
+}
+
+test {
+    useJUnitPlatform()
+}
