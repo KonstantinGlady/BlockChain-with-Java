@@ -150,6 +150,6 @@ public class ECoin extends Application {
 
             e.printStackTrace();
         }
-        BlockchainData.getInstance().loadBlockchain();
+        BlockchainData.getInstance().loadBlockChain();
     }
 }
